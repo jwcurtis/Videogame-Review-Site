@@ -26,8 +26,7 @@ function App() {
             {isLoggedIn && !isSidebarOpen && <ShowSideBarButton onClick={(event) => ToggleSideBarClicked(event, setIsSidebarOpen)} />}
 
           <div className = "main">
-
-            <LoginPage onLogonSubmit={(event) => LogonButtonClicked(event, setIsLoggedIn)} />
+                {!isLoggedIn && <LoginPage onLogonSubmit={(event) => LogonButtonClicked(event, setIsLoggedIn)} />}
           </div>
         </div>
     );
