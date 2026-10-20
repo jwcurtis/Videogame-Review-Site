@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="reviewsite.client/reviewsite.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="ReviewSite.Server/ReviewSite.Server.csproj" />
+</Solution>
