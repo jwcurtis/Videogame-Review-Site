@@ -4,8 +4,8 @@ import './App.css';
 import { SideBar } from './ReactObjects/SideBar.jsx'
 import { LoginPage } from './ReactObjects/LoginObject.jsx'
 
-function onLogonSubmit() {
-    // Handle login logic here
+function LogonButtonClicked(event) {
+    event.preventDefault();
     console.log('Login button event');
 }
 
@@ -16,7 +16,7 @@ function App() {
           <SideBar />
           <div className = "main">
 
-            <LoginPage onLogonSubmit={onLogonSubmit} />
+            <LoginPage onLogonSubmit={LogonButtonClicked} />
           </div>
         </div>
     );
