@@ -94,6 +94,18 @@
     font-family: var(--sans);
     font-size: 6px;
 }
+.show-button {
+    background-color: var(--accent-bg);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 6px;
+    max-height: 30px;
+}
 
 
 .login-page {
