@@ -22,17 +22,17 @@ export function ShowSideBarButton({ onClick }) {
     )
 }
 
-export function SideBar({ HideSideBarClicked }) {
+export function SideBar({ HideSideBarClicked, HomeClicked, SearchClicked, AddClicked, ProfileClicked, SignOutClicked }) {
 
 
     return (
         <aside className="sidebar" >
             <ToggleButton text="Hide Sidebar" onClick={HideSideBarClicked} />
-            <PageButton page="Home" onClick={() => console.log('Home button clicked')} />
-            <PageButton page="Search Games" onClick={() => console.log('Search Games button clicked')} />
-            <PageButton page="Add Game" onClick={() => console.log('Add Game button clicked')} />
-            <PageButton page="Profile" onClick={() => console.log('Profile button clicked')} />
-            <PageButton page="Sign Out" onClick={() => console.log('Sign Out button clicked')} />
+            <PageButton page="Home" onClick={HomeClicked} />
+            <PageButton page="Search Games" onClick={ SearchClicked } />
+            <PageButton page="Add Game" onClick={AddClicked} />
+            <PageButton page="Profile" onClick={ProfileClicked} />
+            <PageButton page="Sign Out" onClick={SignOutClicked} />
         </aside>
   );
 }

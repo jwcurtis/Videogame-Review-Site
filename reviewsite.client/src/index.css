@@ -212,11 +212,21 @@
     letter-spacing: -0.24px;
     margin: 0 0 8px;
 }
-.title-small{
+.title-small {
+    padding: 4px 0 2px 0;
     font-size: 18px;
     line-height: 1.2;
     letter-spacing: -0.24px;
     margin: 0 0 8px;
+    text-align: left;
+    border-top: 1px solid var(--border);
+}
+.text-box-small {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: -0.24px;
+    margin: 0 0 8px;
+    text-align: left;
 }
 
 .game-grid{
@@ -240,14 +250,8 @@
     height: auto;
     max-width: 100px;
     max-height: 100px;
-    border-radius: 4px;
 }
-.text-box-small {
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: -0.24px;
-    margin: 0 0 8px;
-}
+
 
 .main {
     flex: 1;
