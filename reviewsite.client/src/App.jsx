@@ -3,11 +3,12 @@ import './App.css';
 
 import { SideBar, ShowSideBarButton } from './ReactObjects/SideBar.jsx'
 import { LoginPage } from './ReactObjects/LoginObject.jsx'
+import { HomePage } from './ReactObjects/HomePage.jsx' 
 
-function LogonButtonClicked(event, setIsLoggedIn) {
+function LogonButtonClicked(event, setIsLoggedIn, setOpenPage) {
     event.preventDefault();
-    console.log('Login button event');
     setIsLoggedIn(true);
+    setOpenPage('Home');
 }
 
 function ToggleSideBarClicked(event, setIsSidebarOpen) {
@@ -16,9 +17,17 @@ function ToggleSideBarClicked(event, setIsSidebarOpen) {
     setIsSidebarOpen(prevState => !prevState);
 }
 
+function PageButtonClicked(event, setOpenPage) {
+    event.preventDefault();
+    console.log('Page button event');
+    setOpenPage('Home');
+}
+
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+    const [openPage, setOpenPage] = useState('');
+
 
     return (
         <div className="App">
@@ -26,7 +35,8 @@ function App() {
             {isLoggedIn && !isSidebarOpen && <ShowSideBarButton onClick={(event) => ToggleSideBarClicked(event, setIsSidebarOpen)} />}
 
           <div className = "main">
-                {!isLoggedIn && <LoginPage onLogonSubmit={(event) => LogonButtonClicked(event, setIsLoggedIn)} />}
+                {!isLoggedIn && <LoginPage onLogonSubmit={(event) => LogonButtonClicked(event, setIsLoggedIn, setOpenPage)} />}
+                {isLoggedIn && openPage === 'Home' && <HomePage />}
           </div>
         </div>
     );
