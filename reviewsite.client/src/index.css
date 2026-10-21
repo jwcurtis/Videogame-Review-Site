@@ -252,6 +252,40 @@
     max-height: 100px;
 }
 
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 20px;
+    justify-content: center;
+}
+.game-modal {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--bg);
+
+}
+.button-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--accent-bg);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
 
 .main {
     flex: 1;
